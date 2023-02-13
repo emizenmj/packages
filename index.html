@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pricing Table</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/logos/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="./assets/images/logos/apple-touch-icon.png">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <!--External CSS-->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="pricing d-lg-flex align-items-lg-center">
+        <div class="container">
+            <div class="section-title">
+                <h1>Our Pricing</h1>
+            </div>
+            <div class="price-toggle-btn">
+                <span>Annually</span>
+                <div>
+                    <input type="checkbox" id="switch" checked onclick="switchPrice()" />
+                    <label for="switch">Toggle</label>
+                </div>
+                <span>Monthly</span>
+            </div>
+            <!---Packages Container--->
+            <div class="row packages-container g-0 align-items-center">
+                <!---Basic Package--->
+                <div class="col-lg-4">
+                    <div class="package">
+                        <h5>Basic</h5>
+                        <h2 class="monthly-price"><span>&dollar;</span><b>19.99</b></h2>
+                        <h2 class="yearly-price"><span>&dollar;</span><b>199.99</b></h2>
+                        <ul class="fetures-list">
+                            <li>500 GBS Storage</li>
+                            <li>2 Users Allowed</li>
+                            <li>Send up to 3 GB</li>
+                        </ul>
+                        <a href="javascript:;" class="button button-blue">Learn More</a>
+                    </div>
+                </div>
+                <!---Professional Package--->
+                <div class="col-lg-4">
+                    <div class="package package--blue">
+                        <h5>Professional</h5>
+                        <h2 class="monthly-price"><span>&dollar;</span><b>24.99</b></h2>
+                        <h2 class="yearly-price"><span>&dollar;</span><b>249.99</b></h2>
+                        <ul class="fetures-list">
+                            <li>1 TB Storage</li>
+                            <li>5 Users Allowed</li>
+                            <li>Send up to 10 GB</li>
+                        </ul>
+                        <a href="javascript:;" class="button button-white">Learn More</a>
+                    </div>
+                </div>
+                <!---Master Package--->
+                <div class="col-lg-4">
+                    <div class="package">
+                        <h5>Master</h5>
+                        <h2 class="monthly-price"><span>&dollar;</span><b>39.99</b></h2>
+                        <h2 class="yearly-price"><span>&dollar;</span><b>399.99</b></h2>
+                        <ul class="fetures-list">
+                            <li>2 TB Storage</li>
+                            <li>10 Users Allowed</li>
+                            <li>Send up to 20 GB</li>
+                        </ul>
+                        <a href="javascript:;" class="button button-blue">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---Toggle Price JS---> 
+    <script type="text/javascript">
+    function switchPrice() {
+        let checkBox = document.getElementById("switch");
+        let monthlyPrice = document.getElementsByClassName("monthly-price");
+        let yearlyPrice = document.getElementsByClassName("yearly-price");
+
+        for (var i = 0; i < monthlyPrice.length; i++) {
+            if (checkBox.checked == true) {
+                monthlyPrice[i].style.display = "block";
+                yearlyPrice[i].style.display = "none";
+            } else if (checkBox.checked == false) {
+                monthlyPrice[i].style.display = "none";
+                yearlyPrice[i].style.display = "block";
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
